@@ -20,7 +20,7 @@ Web GUI → 插件 → 添加插件 → 选择本目录；或让 Agent 执行
 
 ## 故障排查
 
-勾选只是把「这个模型收图片」写进配置；请求是否被接受最终由服务端的模型能力决定。上传图片后若服务端返回 4xx（如 GLM 的 `1210 messages.content.type 参数非法，取值范围 ['text']`），说明该模型本身是文本-only，请取消它的勾选并换用支持视觉的模型。实测（2026-11，GLM Coding 端点）：`glm-5.3-flash` 支持视觉并正确识图；`glm-5.3` 旗舰在 coding 与通用端点均拒收图片。
+勾选只是把「这个模型收图片」写进配置；请求是否被接受最终由服务端的模型与协议入口决定。上传图片后若服务端返回 4xx（如 GLM 的 `1210 messages.content.type 参数非法，取值范围 ['text']`），先确认走的是哪个协议入口：实测（2026-11，GLM Coding 端点）**OpenAI 兼容面**（`/api/coding/paas/v4` 与 `/api/paas/v4`）对旗舰 `glm-5.3` 只接受文本内容，而 **Anthropic 兼容面**（`https://open.bigmodel.cn/api/anthropic`，即 `x-api-key` + `/v1/messages`）对 `glm-5.3` 与 `glm-5.3-flash` 均接受图片。DSH 中把该提供方的 API 协议改为 Anthropic Messages、baseURL 改为 `https://open.bigmodel.cn/api/anthropic` 即可让旗舰识图（zcode 等客户端正是走此入口）。
 
 ## 说明与限制
 

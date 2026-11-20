@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model image input",
+    "description": "Adds a per-model \"supports images\" checkbox to every third-party provider card on the Models settings page (the llm-pi-ai adapter family: OpenAI-compatible gateways and self-hosted endpoints). The checkbox reflects the model's effective input modalities with the same precedence the pi-ai adapter resolves (entry input, then the installed catalog, then the route's defaultInput). Checking it writes input [\"text\",\"image\"] so image attachments are sent to that model; unchecking writes [\"text\"]. Reads and writes go through the official settings service with revision conflict detection, and the official Models editor keeps working beside it. No restart is needed."
+  }
+}

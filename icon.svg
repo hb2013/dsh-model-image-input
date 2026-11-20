@@ -1,0 +1,13 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 12C6 9.79086 7.79086 8 10 8H24C26.2091 8 28 9.79086 28 12V22C28 24.2091 26.2091 26 24 26H10C7.79086 26 6 24.2091 6 22V12Z" fill="url(#dsamic-frame)" />
+  <path d="M11 21.5L15.2 15.6C15.6 15.0422 16.4 15.0422 16.8 15.6L19.5 19.3L21.2 17.4C21.6 16.9333 22.4 16.9333 22.8 17.4L25.5 20.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="12.4" cy="12.9" r="2" fill="#FFFFFF" />
+  <circle cx="25" cy="25" r="6.4" fill="#1FB6C9" />
+  <path d="M22.2 25L24.2 27L28 22.6" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+  <defs>
+    <linearGradient id="dsamic-frame" x1="17" y1="8" x2="17" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7AC2FF" />
+      <stop offset="1" stop-color="#4D6BFE" />
+    </linearGradient>
+  </defs>
+</svg>

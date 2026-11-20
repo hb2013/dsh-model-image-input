@@ -1,0 +1,3 @@
+- insert:
+    - id: model-image-input
+      name: 'dsh-model-image-input'
